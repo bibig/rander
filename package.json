@@ -1,28 +1,36 @@
 {
-	"author": {
-		"name": "Bibig",
-		"email": "bibig@me.com",
-		"url": "https://twitter.com/bibig"
-	  },
-    "name": "rander",
-    "version": "0.0.1",
-    "description": "generate a fixed length random number-alpha string or pure number string",
-    "preferGlobal": "true",
-    "main": "index.js",
-    "keywords": ["random", "rander"],
-    "repository" : {
-        "type": "git",
-        "url": "https://github.com/bibig/node-rander.git"
-    },
-    "scripts": {
-      "test": "mocha -w"
-    },
-    "license": "MIT",
-    "readmeFilename": "README.md",
-    "dependencies": {
-      "assert": "*",
-      "should": "*",
-      "mocha": "*"
-    },
-    "engines": { "node": "*" }
+  "author": "Bibig <bibig@me.com> (https://twitter.com/bibig)",
+  "name": "rander",
+  "version": "0.0.1",
+  "description": "generate a fixed length random number-alpha string or pure number string",
+  "preferGlobal": "true",
+  "main": "index.js",
+  "keywords": [
+    "random",
+    "rander"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bibig/node-rander.git"
+  },
+  "scripts": {
+    "test": "mocha -w"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "express": "3.1.0"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/bibig/node-rander/issues"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
 }
