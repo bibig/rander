@@ -1,12 +1,16 @@
-# shorthash
+# node-rander
 
 + A mini Node.js module to generate fixed length random string or number.
-
++ support customizing the chars dictionary.
 
 ## Usage
 
-+ rander.string([len], [dict])   // default len: 8, default dict: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz
-+ rander.number([len], [dict])   // default len: 8, default dict: 0123456789
++ rander.string([len], [dict])
++ rander.number([len], [dict])
++ default len: 8
++ default dict for string: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz
++ default dict for number: 0123456789
+
 
 
 ```javascript
