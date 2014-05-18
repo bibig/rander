@@ -1,14 +1,44 @@
-var rander = require('../rander');
+var rander = require('../index');
 
-// without length attribute, using default length
-console.log(rander.string());
-console.log(rander.number());
+function times (x, cb) {
+  x = x || 1;
+
+  do {
+    cb();
+  } while (--x > 0);
+}
+
+times(50, function () {
+  console.log(rander.dice(100));
+});
+
+times(50, function () {
+  console.log(rander.between(150, 240));
+});
+
+times(10, function () {
+  console.log(rander.string(20));
+});
+
+times(10, function () {
+  console.log(rander.number());
+});
+
+times(10, function () {
+  console.log(rander.pickup(13, '!@#$%^&*('));
+});
 
 
-// with a given length
-console.log(rander.string(50));
-console.log(rander.number(50));
+times(10, function () {
+  console.log(rander.ele(['a', 'b', 'c', 'd', 'e', 'f']));
+});
 
-// with a length and a dictionary
-console.log(rander.string(3, '!@#$%^&*('));
+
+times(10, function () {
+  console.log(rander.key({k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5'}));
+});
+
+times(10, function () {
+  console.log(rander.value({k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5'}));
+});
 

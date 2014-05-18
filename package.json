@@ -1,7 +1,7 @@
 {
   "author": "Bibig <bibig@me.com> (https://twitter.com/bibig)",
   "name": "rander",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "generate a fixed length random number-alpha string or pure number string",
   "preferGlobal": "true",
   "main": "index.js",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bibig/node-rander.git"
+    "url": "https://github.com/bibig/rander.git"
   },
   "scripts": {
     "test": "mocha -w"
@@ -26,7 +26,7 @@
     "node": "*"
   },
   "bugs": {
-    "url": "https://github.com/bibig/node-rander/issues"
+    "url": "https://github.com/bibig/rander/issues"
   },
   "directories": {
     "example": "examples",
