@@ -1,1 +1,1 @@
-module.exports = require('./rander');
+module.exports = require('./libs/rander');

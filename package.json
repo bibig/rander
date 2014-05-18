@@ -1,7 +1,7 @@
 {
   "author": "Bibig <bibig@me.com> (https://twitter.com/bibig)",
   "name": "rander",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "generate a fixed length random number-alpha string or pure number string",
   "preferGlobal": "true",
   "main": "index.js",
@@ -16,12 +16,11 @@
   "scripts": {
     "test": "mocha -w"
   },
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "mocha": "*",
-    "should": "*",
-    "express": "3.1.0"
+    "should": "*"
   },
   "engines": {
     "node": "*"

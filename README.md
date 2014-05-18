@@ -1,31 +1,95 @@
 # node-rander
 
-+ A mini Node.js module to generate fixed length random string or number.
-+ support customizing the chars dictionary.
++ a module to generate random string.
++ support custom dictionary.
+
+## install
+  npm install rander
 
 ## Usage
 
-+ rander.string([len], [dict])
-+ rander.number([len], [dict])
-+ default len: 8
-+ default dict for string: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz
-+ default dict for number: 0123456789
+```javascript
+  var rander = require('rander');
+```
 
+### dice(max)
 
+throw a dice and return a number not beyond the max argument.
 
 ```javascript
-var rander = require("rander");
+  rander.dice(9); // will return a number in 0 ~ 9  
+```
 
-// without length attribute, using default length
-console.log(rander.string()); // output: DbekoPTC
-console.log(rander.number()); // output: 71256599
+### between(min, max)
 
+randomly return a number in the given range.
 
-// with a given length
-console.log(rander.string(50)); // output: cU4oofQNQDleJaIToTsUt7QqvdJ8cBNlTJ8mVFPx5Awr0EuxmG
-console.log(rander.number(50)); // output: 18200284942412405851443769383804773969628467668668
+```javascript
+  rander.between(1, 10); // will return a number in 1~10  
+```
 
-// with a length and a dictionary
-console.log(rander.string(3, '!@#$%^&*?')); // output: #!^
+### pickup(len, dictionary)
+randomly make a fixed length string using the given dictionary.
+
+```javascript
+  rander.pickup(2, 'abcde');
+  // or
+  rander.pickup('abcde'); // the default length is 1;
+```
+
+### string(len)
+
++ using pickup to return an alphanumber string in the fixed length.
++ the dictionary: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz 
+
+```javascript
+  rander.string(6);
+```
+
+### number(len)
+
++ using pickup to return an number string in the fixed length.
++ the dictionary: 0123456789
+
+```javascript
+  rander.number(); // default length is 8
+```
+
+### element(array)
+
+randomly return an element in array.
+
+```javascript
+
+  var arr = ['a', 'b', 'c'];
+  
+  rander.element(arr); // will return a string 'a', 'b', or 'c'
+  // or
+  rander.ele(arr);
+
+```
+### key(object)
+
+randomly return a key in the object
+
+```javascript
+
+  var obj = {a: 'v1', b: 'v2', c: 'v3'};
+  
+  rander.key(obj); // will return a string 'a', 'b', or 'c'
+
+```
+
+### value(object)
+
+randomly return a value int the object
+
+```javascript
+
+  var obj = {a: 'v1', b: 'v2', c: 'v3'};
+  
+  rander.value(obj); // will return a string 'v1', 'v2', or 'v3'
+  // or
+  rander.val(obj);
 
 ```

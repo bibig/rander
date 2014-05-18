@@ -1,7 +1,5 @@
 var should = require('should');
-var assert = require('assert');
-
-var rander = require('../rander');
+var rander = require('../index');
 
 
 function getLength () {
@@ -24,7 +22,8 @@ describe('random string test', function () {
       var r = rander.string();
       // console.log(r);
       // console.log(typeof r);
-      assert.ok(typeof r == 'string');
+      // 
+      should(typeof r == 'string').be.ok;
     });
   });
   
@@ -32,16 +31,16 @@ describe('random string test', function () {
     times(10, function () {
       var len = getLength();
       var r = rander.string(len);
-      assert.ok(typeof r == 'string');
-      assert.ok(r.length == len);
+      should(typeof r == 'string').be.ok;
+      should(r.length == len).be.ok;
     });
   });
   
   it('should generate a number with default length', function () {
     times(10, function () {
       var r = rander.number();
-      assert.ok(typeof r == 'string');
-      assert.ok(!isNaN(r));
+      should(typeof r == 'string').be.ok;
+      should(!isNaN(r)).be.ok;
     });
   });
   
@@ -49,33 +48,33 @@ describe('random string test', function () {
     times(10, function () {
       var len = getLength();
       var r = rander.number(len);
-      assert.ok(typeof r == 'string');
-      assert.ok(!isNaN(r));
+      should(typeof r == 'string').be.ok;
+      should(!isNaN(r)).be.ok;
     });
   });
   
   it('should fetch the first char', function () {
     var right = false;
     times(1000, function () {
-      var c = rander.number(1, '012345');
+      var c = rander.pickup(1, '012345');
       if (c == '0') {
         right = true;
       }
     });
     
-    assert.ok(right);
+    should(right).be.ok;
   });
   
   it('should fetch the last char', function () {
     var right = false;
     times(1000, function () {
-      var c = rander.number(1, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz');
+      var c = rander.pickup('0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz');
       if (c == 'z') {
         right = true;
       }
     });
     
-    assert.ok(right);
+    should(right).be.ok;
   });
 });
 
