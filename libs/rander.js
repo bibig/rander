@@ -9,11 +9,11 @@ exports.key     = key;
 exports.value   = value;
 exports.val     = value;
 
-function string (len, dict) {
+function string (len) {
 	return pickup(len || 8, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqstrtuvwxyz');
 }
 
-function number (len, dict) {
+function number (len) {
   return pickup(len || 8, '0123456789');
 }
 
